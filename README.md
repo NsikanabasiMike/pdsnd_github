@@ -12,5 +12,5 @@ most favourite activities and the time of occurrence based on the given inputs.
 chicago.csv, new_york_city.csv, and washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+1.	Used repository [pdsnd_github](https://github.com/udacity/pdsnd_github)
+2.	My recourse for code <https://stackoverflow.com/>
