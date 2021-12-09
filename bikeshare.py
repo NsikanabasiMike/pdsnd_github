@@ -149,7 +149,7 @@ def raw_data(df):
     counter = 0 
     while True:
         
-        response = input('\nWould you like to see 5 lines of raw data? Enter Yes or No:\n')
+        response = input('\nWould you like to see 5 lines of raw data? Any input other than "Yes" will terminate:\n')
         if response.title() == 'Yes':
             print('five lines of raw data:\n', df.iloc[counter:counter+5, :])
             counter += 5     
