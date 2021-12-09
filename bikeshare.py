@@ -5,6 +5,7 @@ import numpy as np
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
               'Washington': 'washington.csv' }
+CITIES = 'Chicago', 'New York City', 'Washington'
 MONTHS = ('All','January', 'February', 'March', 'April', 'May', 'June')
 DAYS_OF_WEEK = ('All', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
 def get_filters():
@@ -17,7 +18,6 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    cities = 'Chicago', 'New York City', 'Washington'
     print('Available cities: ',cities)
     while True:
         city = input('Enter city name: ').title()
