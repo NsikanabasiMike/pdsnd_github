@@ -5,6 +5,7 @@ import numpy as np
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
               'Washington': 'washington.csv' }
+CITIES = 'Chicago', 'New York City', 'Washington'
 MONTHS = ('All','January', 'February', 'March', 'April', 'May', 'June')
 DAYS_OF_WEEK = ('All', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
 def get_filters():
@@ -17,22 +18,21 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    cities = 'Chicago', 'New York City', 'Washington'
-    print('Available cities: ',cities)
+    print('Available cities: ',CITIES)
     while True:
-        city = input('Enter city name: ').title()
+        city = input('Enter city name ').title()
     
-        if city in cities:
+        if city in CITIES:
             break
     print('List of available months: ',MONTHS)
 
     while True:
-        month = input('Enter month name: ').title()
+        month = input('Enter month name\nNote-- if "All" is inputted, the most frequent month will be chosen\n: ').title()
         if month in MONTHS:
             break
     print('Available days of the week:',DAYS_OF_WEEK)
     while True:
-        day = input('Enter day of the week: ').title()
+        day = input('Enter day of the week\nNote-- if "All" is inputted, the most frequent day will be chosen\n: ').title()
         if day in DAYS_OF_WEEK:
             break
 
@@ -149,7 +149,7 @@ def raw_data(df):
     counter = 0 
     while True:
         
-        response = input('\nWould you like to see 5 lines of raw data? Enter Yes or No:\n')
+        response = input('\nWould you like to see 5 lines of raw data? Any input other than "Yes" will terminate:\n')
         if response.title() == 'Yes':
             print('five lines of raw data:\n', df.iloc[counter:counter+5, :])
             counter += 5     
@@ -166,7 +166,7 @@ def main():
         user_stats(df)
         raw_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart? Any input other than "Yes" will terminate:\n')
         if restart.lower() != 'yes':
             break
 
