@@ -20,19 +20,19 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     print('Available cities: ',CITIES)
     while True:
-        city = input('Enter city name: ').title()
+        city = input('Enter city name ').title()
     
         if city in CITIES:
             break
     print('List of available months: ',MONTHS)
 
     while True:
-        month = input('Enter month name: ').title()
+        month = input('Enter month name\nNote-- if "All" is inputted, the most frequent month will be chosen\n: ').title()
         if month in MONTHS:
             break
     print('Available days of the week:',DAYS_OF_WEEK)
     while True:
-        day = input('Enter day of the week: ').title()
+        day = input('Enter day of the week\nNote-- if "All" is inputted, the most frequent day will be chosen\n: ').title()
         if day in DAYS_OF_WEEK:
             break
 
