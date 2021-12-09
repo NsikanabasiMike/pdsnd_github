@@ -5,7 +5,8 @@
 Bikeshare
 
 ### Description
-Describe what your project is about and what it does
+The project gets inputs from users and displays information about 
+most favourite activities and the time of occurrence based on the given inputs.
 
 ### Files used
 Include the files used
